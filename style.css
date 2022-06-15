@@ -1,0 +1,395 @@
+body, ul, a, h1,h2, h3, h4, h5,p, ul, ol, li #header {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+#logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #edf6f9;
+}
+
+.cabecalho{
+    background: #001845;
+    width: 100vw;
+}
+
+#header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    padding: 1rem;
+    box-sizing: border-box;
+    justify-content: space-between;
+    
+}
+#menu {
+    display: block;
+    list-style: none;
+    gap: 0.5rem;
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    right: 0px;
+    height: 0px;
+    z-index: 10000;
+    transition: 0.6s;
+    overflow-y: auto;
+    cursor: pointer;
+    
+}
+
+#menu a {
+    display: block;
+    padding: .5rem;
+    color: #edf6f9;
+}
+
+#menu a:hover {
+    background: rgb(187, 184, 184);
+}
+
+
+#nav.active #menu {
+    display: block;
+    background: #001845;
+    height: calc(50vh - 100px);
+    visibility: visible;
+}
+
+#btn-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 40px;
+    width: 40px;
+    padding: 0 1rem 0 0;
+    gap: 8px;
+    border: 0px;
+    background: #001845;
+
+}
+
+#icon{
+    width: 30px;
+    height:2px;
+    background: #edf6f9;
+    transition: 0.3s;
+}
+
+#btn-mobile::before{
+    content: "";
+    width: 30px;
+    height: 2px;
+    background: #edf6f9;
+}
+
+#btn-mobile::after{
+    content: "";
+    width: 30px;
+    height: 2px;
+    background: #edf6f9;
+    transition: 0.3s;
+    position: relative;
+}
+
+#menu a { 
+    padding: 1rem 0;
+    border-bottom: 1px solid #edf6f9;
+}
+
+
+#btn-mobile.open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 40px;
+    width: 40px;
+    padding: 0 1rem 0 0;
+    gap: 5px;
+
+}
+
+
+#btn-mobile.open::before {
+    visibility: hidden;
+}
+
+#btn-mobile.open #icon{
+    transform: rotate(135deg);
+    
+}
+
+#btn-mobile.open::after {
+    transform: rotate(-135deg);
+    top: -7px;
+}
+
+
+
+main{
+    height: calc(100vh -  200px);
+    overflow-y: auto;
+}
+
+.container1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.box1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #001845;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.box1 h1{
+    font-size: 2rem;
+    color: #001845;
+}
+
+.box1 h2{
+    font-size: 1.5rem;
+    color: #001845;
+}
+
+.box1 p{
+    font-size: 1rem;
+    box-sizing: border-box;
+    color: #001845;
+}
+
+.box1 a, .card a{
+    font-size: 1rem;
+    background: #001845;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    color: #edf6f9;
+    font-weight: 600;
+    display: block;
+    width: fit-content;
+}
+
+.container1 .box2{
+    justify-content: flex-end;
+}
+
+.box2 img {
+    max-height: 70%;
+    max-width: 100%;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+
+.container3 {
+    background: #001845;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem 1rem;
+}
+
+.container3 .serv{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.container3 .serv div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container3 h2, p, a {
+    color: #edf6f9;
+}
+
+.container3 img {
+    max-width: 150px;
+}
+
+.container3 a{
+    font-size: 1rem;
+    background: #edf6f9;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    color: #001845;
+    font-weight: 600;
+    display: block;
+    width: fit-content;
+    
+}
+
+.vitrine{
+    padding: 1rem;
+    overflow-x: auto;
+    display: flex;
+    gap: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-sizing: border-box;
+    padding: 1rem;
+    min-width: 250px;
+    height: 300px;
+    box-shadow: 0 0 0 4px #001845;
+}
+
+.card h3{
+    text-align: center;
+}
+.card ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+.card a{
+    align-self: center;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100px;
+    background: #001845;
+    color: #edf6f9;
+    font-size: 0.8rem;
+    padding: 0 1rem;
+}
+
+
+
+
+@media screen and (min-width: 720px) {
+    
+
+    #menu {
+        visibility: visible;
+        display: flex;
+        position: static;
+        height: fit-content;
+
+    }
+
+    #btn-mobile{
+        display: none;
+        background: #001845;
+    }
+
+    
+    #menu a {
+        display: block;
+        padding: .5rem;
+        color: #edf6f9;
+    }
+
+    .container1{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .box1, .box2{
+        box-sizing: border-box;
+    }
+
+    .box1{
+        width: 40%;
+    }
+
+    .box2{
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box2 img{
+        max-height: 100%;
+        max-width: 100%;
+    }
+    .container2{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container3 .serv{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+    }
+
+}
+
+@media screen and (min-width: 816px) {
+   .cabecalho {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+   }
+
+   #header, footer{
+        width: 80%;
+        max-width: 1200px;
+   }
+    main {
+        width: 100vw;
+    }
+
+    .container1, .container2, .vitrine{
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+   
+    .container3{
+        margin: 0 auto;
+    }
+    .box1, .box2{
+        width: 35%;
+    }
+    
+    .vitrine{
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+}
